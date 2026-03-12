@@ -60,6 +60,9 @@ export default function NewsletterSignup({ variant = 'light', className }: Newsl
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
+          data-lpignore="true"
+          data-form-type="other"
+          autoComplete="off"
           className={cn(
             'flex-1 min-w-0 px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-bright transition-all',
             variant === 'dark'
