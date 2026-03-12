@@ -7,7 +7,7 @@ import { formatDate } from '@/lib/utils'
 import NewsletterSignup from '@/components/shared/NewsletterSignup'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
   if (!post) return {}
 
   return {
@@ -99,8 +100,9 @@ function renderContent(content: string) {
   return elements
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.slug === slug)
   if (!post) notFound()
 
   const relatedPosts = blogPosts
