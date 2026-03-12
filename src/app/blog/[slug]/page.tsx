@@ -202,11 +202,6 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Featured Image — full bleed */}
-      <div className="w-full overflow-hidden h-64 md:h-[420px]">
-        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-      </div>
-
       {/* Article Body */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -214,6 +209,9 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <article className="lg:col-span-2 prose max-w-none">
+                <div className="w-full h-52 md:h-72 overflow-hidden rounded-2xl mb-6">
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                </div>
                 <p className="text-lg text-brand-muted leading-relaxed mb-6 font-medium">
                   {post.excerpt}
                 </p>
