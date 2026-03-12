@@ -1,115 +1,129 @@
+'use client'
+
+import { useRef } from 'react'
 import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
 import { ArrowRight, Search, Rocket, BarChart3, TrendingUp } from 'lucide-react'
 
 const steps = [
   {
     number: '01',
     icon: Search,
-    title: 'Free Strategy Audit',
+    title: 'Audit & Strategy',
     duration: 'Week 1',
-    description:
-      'We analyze your current marketing, competitors, and market opportunity. You walk away with a clear action plan — even if you don\'t hire us.',
-    highlights: ['Competitor gap analysis', 'Revenue opportunity mapping', 'Custom growth roadmap'],
+    description: 'We dissect your current marketing, competitors, and market gaps. You get a clear action plan \u2014 even if you don\'t hire us.',
+    highlights: ['Competitor gap analysis', 'Revenue opportunity map', 'Custom growth roadmap'],
   },
   {
     number: '02',
     icon: Rocket,
-    title: 'Launch & Execute',
-    duration: 'Weeks 2-4',
-    description:
-      'Our team builds and launches your campaigns — fast. Websites, ads, funnels, SEO — whatever your strategy calls for, we execute with precision.',
-    highlights: ['Conversion-optimized builds', 'Campaign launch & tracking', 'CRM & automation setup'],
+    title: 'Build & Launch',
+    duration: 'Weeks 2\u20134',
+    description: 'Websites, ads, funnels, SEO \u2014 whatever your strategy calls for, we build and launch it with precision.',
+    highlights: ['Conversion-first builds', 'Campaign launch & tracking', 'CRM & automation wiring'],
   },
   {
     number: '03',
     icon: BarChart3,
-    title: 'Optimize Relentlessly',
+    title: 'Optimize & Scale',
     duration: 'Ongoing',
-    description:
-      'We monitor every metric daily. A/B test everything. Kill what doesn\'t work. Double down on what does. Your ROI improves every single week.',
-    highlights: ['Daily performance checks', 'A/B split testing', 'Budget reallocation'],
+    description: 'We monitor daily, A/B test everything, kill underperformers, and double down on winners. Your ROI improves weekly.',
+    highlights: ['Daily performance checks', 'A/B split testing', 'Smart budget reallocation'],
   },
   {
     number: '04',
     icon: TrendingUp,
-    title: 'Scale What Works',
+    title: 'Report & Grow',
     duration: 'Ongoing',
-    description:
-      'Once we find your winning formula, we scale it aggressively. More traffic. More leads. More revenue. You get transparent reports every step of the way.',
-    highlights: ['Transparent reporting', 'Revenue scaling', 'Growth planning sessions'],
+    description: 'Transparent reporting, growth planning sessions, and aggressive scaling once we find your winning formula.',
+    highlights: ['Clear dashboards', 'Monthly strategy reviews', 'Revenue scaling plans'],
   },
 ]
 
+function FadeInView({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-60px' })
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{ duration: 0.5, delay, ease: [0.23, 1, 0.32, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export default function ProcessSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white overflow-hidden">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="badge-blue mb-4">How It Works</span>
+        <FadeInView className="text-center max-w-3xl mx-auto mb-16">
+          <span className="section-label">How It Works</span>
           <h2 className="section-heading mb-5">
-            From &ldquo;We Need Help&rdquo; to
-            <span className="gradient-text block mt-1">&ldquo;We Need to Hire More Staff&rdquo;</span>
+            From First Call to
+            <span className="gradient-text block mt-1">Predictable Revenue</span>
           </h2>
-          <p className="section-subheading">
-            A simple, proven 4-step process. Most clients see measurable results within the first 30 days.
+          <p className="section-subheading mx-auto">
+            A proven 4-step system. Most clients see measurable results within 30 days.
           </p>
-        </div>
+        </FadeInView>
 
-        {/* Horizontal steps — cleaner than zigzag */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-brand-deep/20 to-brand-bright/20 z-0" style={{ width: 'calc(100% - 3rem)', left: 'calc(50% + 1.5rem)' }} />
-              )}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-bright/20 via-brand-bright/10 to-transparent hidden md:block" />
 
-              <div className="relative bg-white rounded-2xl p-6 border border-gray-100 hover:border-brand-bright/30 hover:shadow-card transition-all duration-300 h-full">
-                {/* Number + Icon */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-brand flex items-center justify-center text-white font-extrabold text-lg shadow-md">
+          <div className="space-y-8 md:space-y-12">
+            {steps.map((step, i) => (
+              <FadeInView key={step.number} delay={i * 0.1}>
+                <div className={`relative flex flex-col md:flex-row items-start gap-6 md:gap-12 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-gradient-brand items-center justify-center text-white font-extrabold text-sm shadow-glow z-10">
                     {step.number}
                   </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-brand-bright uppercase tracking-widest">{step.duration}</span>
-                  </div>
-                </div>
 
-                <h3 className="text-lg font-bold text-brand-dark mb-2">{step.title}</h3>
-                <p className="text-sm text-brand-muted leading-relaxed mb-4">{step.description}</p>
-
-                <div className="space-y-1.5">
-                  {step.highlights.map((h) => (
-                    <div key={h} className="flex items-center gap-2 text-xs text-brand-muted">
-                      <svg className="w-3.5 h-3.5 text-brand-bright flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {h}
+                  <div className={`flex-1 ${i % 2 === 0 ? 'md:pr-16' : 'md:pl-16'} ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    <div className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-card hover:border-brand-bright/20 transition-all duration-300">
+                      <div className={`flex items-center gap-3 mb-3 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        <div className="md:hidden w-10 h-10 rounded-xl bg-gradient-brand flex items-center justify-center text-white font-extrabold text-sm">
+                          {step.number}
+                        </div>
+                        <span className="text-[10px] font-bold text-brand-bright uppercase tracking-widest">{step.duration}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-brand-dark mb-2">{step.title}</h3>
+                      <p className="text-sm text-brand-muted leading-relaxed mb-4">{step.description}</p>
+                      <div className={`flex flex-wrap gap-2 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
+                        {step.highlights.map((h) => (
+                          <span key={h} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-brand-light/60 text-xs text-brand-deep font-medium">
+                            <svg className="w-3 h-3 text-brand-bright flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                            {h}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="hidden md:block flex-1" />
                 </div>
-              </div>
-            </div>
-          ))}
+              </FadeInView>
+            ))}
+          </div>
         </div>
 
-        {/* Process CTA */}
-        <div className="text-center">
+        <FadeInView className="text-center mt-16">
           <p className="text-sm text-brand-muted mb-4">
             Step 1 is free. No obligation. No hard sell.
           </p>
           <Link
             href="/contact"
-            className="btn-primary text-base px-8 py-4 group"
+            className="group inline-flex items-center gap-2 px-7 py-4 bg-gradient-brand text-white font-semibold text-[15px] rounded-xl shadow-glow hover:shadow-glow-lg hover:-translate-y-0.5 transition-all duration-300"
           >
-            Start with Your Free Strategy Audit
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Start with a Free Strategy Audit
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
-        </div>
+        </FadeInView>
       </div>
     </section>
   )

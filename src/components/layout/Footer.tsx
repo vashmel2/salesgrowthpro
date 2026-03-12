@@ -1,6 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react'
+import { Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 import NewsletterSignup from '@/components/shared/NewsletterSignup'
 
 const services = [
@@ -32,10 +34,8 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-white">
-      {/* Main Footer */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
               <Image
@@ -43,20 +43,19 @@ export default function Footer() {
                 alt="SalesGrowthPro"
                 width={160}
                 height={42}
-                className="h-9 w-auto brightness-0 invert"
+                className="h-8 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              We help businesses grow revenue through smart, data-driven digital marketing strategies. Based in the Philippines, serving clients worldwide.
+              Data-driven digital marketing that grows revenue. Based in the Philippines, serving clients worldwide.
             </p>
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {socials.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-brand-bright hover:text-white transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center text-gray-500 hover:bg-brand-bright hover:text-white transition-all duration-200"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -64,16 +63,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services Column */}
           <div>
-            <h4 className="font-semibold text-white mb-5">Services</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-white text-sm mb-5">Services</h4>
+            <ul className="space-y-2.5">
               {services.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-gray-400 hover:text-brand-bright transition-colors duration-200"
-                  >
+                  <Link href={item.href} className="text-sm text-gray-400 hover:text-brand-bright transition-colors duration-200">
                     {item.name}
                   </Link>
                 </li>
@@ -81,28 +76,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Column */}
           <div>
-            <h4 className="font-semibold text-white mb-5">Company</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-white text-sm mb-5">Company</h4>
+            <ul className="space-y-2.5">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-gray-400 hover:text-brand-bright transition-colors duration-200"
-                  >
+                  <Link href={item.href} className="text-sm text-gray-400 hover:text-brand-bright transition-colors duration-200">
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-
-            {/* Contact Info */}
-            <div className="mt-6 space-y-3">
-              <a
-                href="mailto:hello@salesgrowthpro.com"
-                className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-brand-bright transition-colors"
-              >
+            <div className="mt-6 space-y-2.5">
+              <a href="mailto:hello@salesgrowthpro.com" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-brand-bright transition-colors">
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 hello@salesgrowthpro.com
               </a>
@@ -113,26 +99,20 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter Column */}
           <div>
-            <h4 className="font-semibold text-white mb-5">Stay Updated</h4>
+            <h4 className="font-semibold text-white text-sm mb-5">Stay Updated</h4>
             <p className="text-sm text-gray-400 mb-4 leading-relaxed">
-              Get the latest digital marketing tips, strategies, and insights delivered to your inbox.
+              Free marketing tips and strategies in your inbox.
             </p>
             <NewsletterSignup variant="dark" />
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/[0.06]">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} SalesGrowthPro. All rights reserved.
-          </p>
-          <p className="text-sm text-gray-500">
-            Built with ❤️ in the Philippines
-          </p>
+          <p className="text-xs text-gray-600">&copy; {new Date().getFullYear()} SalesGrowthPro. All rights reserved.</p>
+          <p className="text-xs text-gray-600">Based in the Philippines, growing businesses worldwide.</p>
         </div>
       </div>
     </footer>
