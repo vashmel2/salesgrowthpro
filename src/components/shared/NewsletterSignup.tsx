@@ -53,7 +53,7 @@ export default function NewsletterSignup({ variant = 'light', className }: Newsl
 
   return (
     <form onSubmit={handleSubmit} className={cn('space-y-2', className)}>
-      <div className="flex gap-2">
+      <div className="flex gap-2" suppressHydrationWarning>
         <input
           type="email"
           value={email}

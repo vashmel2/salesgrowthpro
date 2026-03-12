@@ -151,8 +151,8 @@ export default function Header() {
               className={cn(
                 'inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300',
                 scrolled
-                  ? 'bg-gradient-brand text-white hover:shadow-glow hover:-translate-y-0.5'
-                  : 'bg-white text-brand-deep hover:shadow-hero hover:-translate-y-0.5'
+                  ? 'bg-gradient-cta text-white hover:shadow-glow-cta hover:-translate-y-0.5'
+                  : 'bg-gradient-cta text-white hover:shadow-cta hover:-translate-y-0.5'
               )}
             >
               Book a Call
@@ -223,7 +223,7 @@ export default function Header() {
               >
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:shadow-glow transition-all"
+                  className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-cta text-white font-semibold rounded-xl hover:shadow-glow-cta transition-all"
                   onClick={() => setMobileOpen(false)}
                 >
                   Book a Free Strategy Call

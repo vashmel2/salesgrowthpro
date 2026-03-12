@@ -133,7 +133,7 @@ export default function ResultsBenefits() {
         <FadeInView className="text-center">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 px-7 py-4 bg-gradient-brand text-white font-semibold text-[15px] rounded-xl shadow-glow hover:shadow-glow-lg hover:-translate-y-0.5 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-7 py-4 bg-gradient-cta text-white font-semibold text-[15px] rounded-xl shadow-cta hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300"
           >
             I Want These Results
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

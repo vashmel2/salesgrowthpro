@@ -16,11 +16,11 @@ export default function NotFound() {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/" className="btn-primary text-base px-8 py-4">
+          <Link href="/" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-cta text-white font-bold text-base rounded-xl shadow-cta hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300">
             <Home className="w-5 h-5" />
             Go Home
           </Link>
-          <Link href="/contact" className="btn-outline-white text-base px-8 py-4">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white font-medium text-base rounded-xl hover:bg-white/10 hover:border-white/40 transition-all duration-300">
             Contact Us
           </Link>
         </div>

@@ -73,7 +73,7 @@ export default function CTASection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-white text-brand-deep font-bold text-base rounded-xl shadow-hero hover:shadow-glow-lg hover:-translate-y-0.5 transition-all duration-300"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-cta text-white font-bold text-base rounded-xl shadow-cta hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300"
               >
                 Book Your Free Strategy Call
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

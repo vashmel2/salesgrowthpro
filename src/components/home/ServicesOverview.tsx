@@ -136,7 +136,7 @@ export default function ServicesOverview() {
               </div>
               <Link
                 href="/contact"
-                className="relative inline-flex items-center justify-center gap-2 w-full py-3.5 bg-white text-brand-deep font-semibold text-sm rounded-xl hover:bg-blue-50 transition-colors"
+                className="relative inline-flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-cta text-white font-semibold text-sm rounded-xl hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300"
               >
                 Get a Free Strategy Call
                 <ArrowRight className="w-4 h-4" />

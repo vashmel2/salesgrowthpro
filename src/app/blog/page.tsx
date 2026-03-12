@@ -31,7 +31,7 @@ export default function BlogPage() {
       <section className="bg-gradient-hero pt-32 pb-20 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
         <div className="relative container-custom text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/15 border border-white/25 text-white text-sm font-medium mb-6">
             Marketing Intelligence
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -50,7 +50,7 @@ export default function BlogPage() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   cat === 'All'
                     ? 'bg-gradient-brand text-white'
                     : 'bg-gray-100 text-brand-muted hover:bg-brand-light hover:text-brand-bright'
@@ -75,14 +75,14 @@ export default function BlogPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
-                  <span className="absolute top-4 left-4 bg-brand-bright text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span className="absolute top-4 left-4 bg-brand-bright text-white text-xs font-bold px-3 py-1.5 rounded-lg">
                     Featured
                   </span>
                 </div>
                 <div className="bg-white p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                      className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${
                         categoryColors[featured.category] || 'bg-gray-100 text-gray-600'
                       }`}
                     >
@@ -137,7 +137,7 @@ export default function BlogPage() {
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span
-                      className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                      className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${
                         categoryColors[post.category] || 'bg-gray-100 text-gray-600'
                       }`}
                     >
@@ -175,7 +175,7 @@ export default function BlogPage() {
             {[1, 2, 3].map((page) => (
               <button
                 key={page}
-                className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
+                className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${
                   page === 1
                     ? 'bg-gradient-brand text-white'
                     : 'bg-gray-100 text-brand-muted hover:bg-brand-light hover:text-brand-bright'
@@ -184,7 +184,7 @@ export default function BlogPage() {
                 {page}
               </button>
             ))}
-            <button className="w-10 h-10 rounded-full bg-gray-100 text-brand-muted hover:bg-brand-light hover:text-brand-bright transition-colors text-sm font-medium">
+            <button className="w-10 h-10 rounded-lg bg-gray-100 text-brand-muted hover:bg-brand-light hover:text-brand-bright transition-colors text-sm font-medium">
               →
             </button>
           </div>

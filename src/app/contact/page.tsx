@@ -66,7 +66,7 @@ export default function ContactPage() {
       <section className="bg-gradient-hero pt-32 pb-20 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
         <div className="relative container-custom text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/15 border border-white/25 text-white text-sm font-medium mb-6">
             Let&apos;s Talk Growth
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -162,7 +162,7 @@ export default function ContactPage() {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <span className="badge-blue mb-4">FAQ</span>
+            <span className="section-label mb-4">FAQ</span>
             <h2 className="section-heading mb-4">Common Questions</h2>
           </div>
           <div className="space-y-4">

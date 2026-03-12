@@ -96,7 +96,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-2.5 px-7 py-4 bg-white text-brand-deep font-bold text-[15px] rounded-xl shadow-hero hover:shadow-glow-lg hover:-translate-y-0.5 transition-all duration-300"
+              className="group relative inline-flex items-center gap-2.5 px-7 py-4 bg-gradient-cta text-white font-bold text-[15px] rounded-xl shadow-cta hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300"
             >
               Get Your Free Growth Plan
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -128,7 +128,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   )
 }

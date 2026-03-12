@@ -17,6 +17,7 @@ const config: Config = {
           light: '#EAF5FC',
           muted: '#6B7A8D',
           surface: '#F7FAFB',
+          cta: '#F97316',
         },
       },
       fontFamily: {
@@ -29,6 +30,7 @@ const config: Config = {
         'gradient-dark': 'linear-gradient(160deg, #0F1419 0%, #1A2332 50%, #162030 100%)',
         'gradient-glass': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
         'gradient-mesh': 'radial-gradient(at 20% 80%, rgba(9,147,209,0.3) 0%, transparent 50%), radial-gradient(at 80% 20%, rgba(0,71,127,0.3) 0%, transparent 50%), radial-gradient(at 50% 50%, rgba(5,105,168,0.2) 0%, transparent 60%)',
+        'gradient-cta': 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
       },
       boxShadow: {
         'card': '0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,71,127,0.06)',
@@ -37,6 +39,8 @@ const config: Config = {
         'glow-lg': '0 0 80px rgba(9,147,209,0.2)',
         'hero': '0 20px 60px rgba(0,71,127,0.25)',
         'glass': '0 8px 32px rgba(0,0,0,0.08)',
+        'glow-cta': '0 0 40px rgba(249,115,22,0.35)',
+        'cta': '0 20px 60px rgba(249,115,22,0.25)',
       },
       borderRadius: {
         '4xl': '2rem',

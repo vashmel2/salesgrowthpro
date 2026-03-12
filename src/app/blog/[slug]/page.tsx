@@ -151,7 +151,7 @@ export default function BlogPostPage({ params }: Props) {
           </Link>
 
           <div className="flex items-center gap-3 mb-5">
-            <span className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold">
+            <span className="px-3 py-1 rounded-lg bg-white/20 text-white text-xs font-semibold">
               {post.category}
             </span>
             <span className="flex items-center gap-1 text-white/60 text-xs">
@@ -190,7 +190,7 @@ export default function BlogPostPage({ params }: Props) {
                 <button
                   key={s.label}
                   aria-label={`Share on ${s.label}`}
-                  className={`w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:text-white ${s.color} transition-colors`}
+                  className={`w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white/70 hover:text-white ${s.color} transition-colors`}
                 >
                   <s.icon className="w-3.5 h-3.5" />
                 </button>
@@ -224,7 +224,7 @@ export default function BlogPostPage({ params }: Props) {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-brand-light text-brand-bright text-xs font-medium rounded-full"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-brand-light text-brand-bright text-xs font-medium rounded-lg"
                     >
                       <Tag className="w-3 h-3" />
                       {tag}
@@ -262,7 +262,7 @@ export default function BlogPostPage({ params }: Props) {
                   <p className="text-sm text-brand-muted mb-4">
                     Book a free consultation with our team.
                   </p>
-                  <Link href="/contact" className="btn-primary w-full justify-center text-sm">
+                  <Link href="/contact" className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-cta text-white font-semibold text-sm rounded-xl shadow-cta hover:shadow-glow-cta hover:-translate-y-0.5 transition-all duration-300">
                     Get Free Consultation
                   </Link>
                 </div>
@@ -292,7 +292,7 @@ export default function BlogPostPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-5">
-                    <span className="badge-blue text-xs mb-2 inline-block">{p.category}</span>
+                    <span className="section-label text-xs mb-2 inline-block">{p.category}</span>
                     <h4 className="font-bold text-brand-dark text-sm leading-snug group-hover:text-brand-bright transition-colors line-clamp-2">
                       {p.title}
                     </h4>

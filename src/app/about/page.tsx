@@ -96,7 +96,7 @@ export default function AboutPage() {
       <section className="bg-gradient-hero pt-32 pb-20 relative overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
         <div className="relative container-custom text-center max-w-4xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-white text-sm font-medium mb-6 backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/15 border border-white/25 text-white text-sm font-medium mb-6 backdrop-blur-sm">
             Our Story
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -131,7 +131,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="badge-blue mb-4">Our Mission</span>
+              <span className="section-label mb-4">Our Mission</span>
               <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6 leading-tight">
                 Democratizing World-Class Digital Marketing for Every Business
               </h2>
@@ -163,7 +163,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="bg-gradient-brand rounded-3xl p-8 md:p-10 text-white">
                 <div className="text-5xl mb-6">🇵🇭</div>
-                <h3 className="text-2xl font-bold mb-4">Based in the Philippines, Built for the World</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Based in the Philippines, Built for the World</h3>
                 <p className="text-white/80 leading-relaxed mb-6">
                   The Philippines is home to some of the most talented digital marketing professionals in the world. We leverage this exceptional talent pool to deliver premium services at rates that make sense for growing businesses everywhere.
                 </p>
@@ -190,7 +190,7 @@ export default function AboutPage() {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="badge-blue mb-4">What We Stand For</span>
+            <span className="section-label mb-4">What We Stand For</span>
             <h2 className="section-heading mb-4">Our Core Values</h2>
             <p className="section-subheading">
               The principles that guide every decision, every campaign, and every client relationship we have.
@@ -214,7 +214,7 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="badge-blue mb-4">Meet the Team</span>
+            <span className="section-label mb-4">Meet the Team</span>
             <h2 className="section-heading mb-4">The Experts Behind Your Growth</h2>
             <p className="section-subheading">
               A team of dedicated digital marketing professionals who genuinely care about your business success.
@@ -241,7 +241,7 @@ export default function AboutPage() {
       <section className="section-padding bg-gradient-subtle">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="badge-blue mb-4">Our Journey</span>
+            <span className="section-label mb-4">Our Journey</span>
             <h2 className="section-heading mb-4">From Startup to Growth Engine</h2>
           </div>
           <div className="max-w-3xl mx-auto">
