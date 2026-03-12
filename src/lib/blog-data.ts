@@ -27,6 +27,12 @@ export const categories = [
   'Business Growth',
 ]
 
+const sgproTeam = {
+  name: 'SGPRO Team',
+  avatar: 'https://ui-avatars.com/api/?name=SG&background=00477F&color=fff&size=80',
+  role: 'Digital Marketing Team',
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: '7-proven-strategies-to-increase-sales-with-google-ads',
@@ -34,64 +40,68 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Discover the exact Google Ads strategies we use to generate 3x more leads for our clients while reducing cost per click by up to 40%.',
     content: `
-Google Ads remains one of the highest-ROI marketing channels available to businesses of all sizes — but only when managed correctly. Most businesses waste 40-60% of their ad budget on poorly structured campaigns.
+Google Ads is one of the best places to spend your marketing budget. When it works, it really works. But when it doesn't, you can burn through cash fast and have nothing to show for it.
 
-## 1. Use Single Keyword Ad Groups (SKAGs)
+We've managed campaigns for hundreds of businesses and the same problems show up over and over. Wasted spend on irrelevant clicks. Ads that nobody reads. Landing pages that don't convert. The good news is that all of these are fixable.
 
-One of the most powerful ways to improve your Quality Score and reduce CPC is to tightly group your keywords. Each ad group should contain tightly related keywords — ideally just 2-3 variations of the same term.
+Here are the seven strategies we use consistently to lower costs and drive more sales.
 
-**Why it works:** Higher relevance between keyword → ad → landing page means better Quality Scores, which means lower costs and better ad positions.
+## 1. Tighten Up Your Ad Groups
 
-## 2. Implement Negative Keywords Religiously
+Most accounts we audit have way too many keywords crammed into each ad group. When one ad has to serve 30 different keywords, it can't do a great job for any of them.
 
-Before spending a single dollar, build a comprehensive negative keyword list. Review your search term reports weekly and add irrelevant queries as negatives immediately.
+We use tightly themed ad groups with just 2-4 closely related keywords per group. This lets you write ads that actually speak to what the person searched for. The result is a better Quality Score, which means Google charges you less per click and shows your ad more often.
 
-**Pro tip:** Start with broad negatives like "free," "DIY," "how to," and "jobs" unless these are relevant to your offering.
+Try it on your best-performing campaign first. You'll usually see an improvement within a week or two.
 
-## 3. Leverage Audience Targeting Overlays
+## 2. Build Your Negative Keyword List Before You Spend a Dollar
 
-Layer audience segments on top of your keyword campaigns. Use In-Market audiences, remarketing lists, and customer match to adjust bids and messaging for users who are more likely to convert.
+If you skip this step, you will regret it. Negative keywords tell Google which searches you don't want to show up for. Without them, you'll pay for clicks from people looking for jobs, free stuff, or something completely unrelated to your business.
 
-## 4. Write Ads That Speak to Intent
+Before launching any campaign, add a base list of negatives like: free, DIY, how to, tutorial, jobs, salary, course, download. Then check your Search Terms report every week and keep adding to the list. It's one of the fastest ways to cut wasted spend.
 
-Your headline should directly address what the user just searched for. Use Dynamic Keyword Insertion (DKI) carefully, and always test at least 3-4 ad variations per ad group.
+## 3. Layer Audiences on Top of Keywords
 
-**Formula:** [Keyword/Problem] → [Value Proposition] → [Call to Action]
+Google lets you add audience segments to keyword campaigns. This doesn't change who can see your ads, but it lets you see performance data by audience type and adjust your bids accordingly.
 
-## 5. Optimize Landing Pages for Conversion
+We typically layer In-Market audiences, remarketing lists, and customer match on every campaign. Over time you'll find that certain audiences convert at much higher rates than others. When that happens, increase your bids for those groups. It's one of the underused features that makes a real difference.
 
-Sending traffic to your homepage is the #1 Google Ads mistake. Each campaign needs a dedicated landing page that mirrors the ad's message, has a single clear CTA, and loads in under 3 seconds.
+## 4. Match Your Ad to the Search
 
-## 6. Use Smart Bidding Strategically
+This sounds obvious but most ads don't do it well. If someone searches "affordable web design for restaurants" and your ad says "Professional Web Design Services," you're leaving clicks on the table.
 
-Target CPA and Target ROAS bidding can dramatically improve performance — but only after you have enough conversion data (at least 30 conversions per month). Start with Manual CPC or Enhanced CPC until you have data.
+Your headline should reflect exactly what the person searched for. Use the search term (or something very close) in your first or second headline. Then use the remaining headlines to add your value proposition and call to action. Test at least three different variations per ad group and let data decide the winner.
 
-## 7. Track Everything With Proper Conversion Data
+## 5. Stop Sending Traffic to Your Homepage
 
-Without conversion tracking, you're flying blind. Set up:
-- Lead form submissions
-- Phone calls
-- Chat initiations
-- E-commerce transactions
+Sending paid traffic to your homepage is the single most common Google Ads mistake. Your homepage serves many different visitors. A landing page serves one type of visitor with one specific goal.
 
-Connect your conversion data to Google Analytics 4 for deeper analysis.
+A good landing page mirrors the message in your ad, has a clear headline, explains the offer quickly, and has one call to action. That's it. Load time matters too. If it takes more than 3 seconds to load on mobile, fix that first.
 
-## Conclusion
+## 6. Wait Before Switching to Smart Bidding
 
-Google Ads success comes from constant testing, optimization, and a deep understanding of your customer's intent. Implement these strategies and you'll see dramatic improvements in your campaign performance.
+Target CPA and Target ROAS bidding can work really well, but only when the algorithm has enough data to learn from. If you switch to smart bidding with fewer than 30 conversions per month, the algorithm will struggle and your performance will likely get worse.
 
-Ready to get more from your Google Ads? [Book a free consultation](/contact) with our certified ads team.
+Start with Manual CPC or Enhanced CPC. Build up your conversion history. Once you're getting consistent conversions, then test smart bidding. Don't rush it.
+
+## 7. Track Real Conversions, Not Just Clicks
+
+Clicks don't pay your bills. Conversions do. Set up tracking for every meaningful action on your site: form submissions, phone calls, live chat, purchase completions. All of it.
+
+Connect your Google Ads account to Google Analytics 4 so you can see the full picture. Which keywords drive sales? Which ads lead to phone calls? Without this data, you're optimizing for the wrong things.
+
+## The Bottom Line
+
+None of these strategies are complicated. But most businesses either skip them or set them up once and never touch them again. Google Ads rewards consistency. Review your campaigns weekly, keep testing, and cut what isn't working.
+
+If you'd like us to take a look at your account, [book a free audit](/contact). We'll show you exactly where your budget is going and how to get more from it.
     `,
     category: 'Google Ads',
     tags: ['Google Ads', 'PPC', 'Lead Generation', 'Digital Marketing'],
     date: '2025-01-15',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80',
-    author: {
-      name: 'Maria Lim',
-      avatar: 'https://ui-avatars.com/api/?name=Maria+Lim&background=0993D1&color=fff&size=80',
-      role: 'Head of Paid Media',
-    },
+    author: sgproTeam,
     featured: true,
   },
   {
@@ -100,87 +110,92 @@ Ready to get more from your Google Ads? [Book a free consultation](/contact) wit
     excerpt:
       'Learn how to rank on the first page of Google without a massive budget. A step-by-step SEO guide specifically tailored for Philippine businesses.',
     content: `
-SEO is the most sustainable long-term marketing strategy for Philippine businesses. While paid ads stop the moment you stop paying, SEO compounds over time — building an asset that drives free traffic indefinitely.
+If you're running a small business in the Philippines and you're not investing in SEO, you're leaving a lot of potential customers on the table. Every day, millions of Filipinos search Google for products and services, and if you're not showing up, someone else is getting that business.
 
-## Understanding the Philippine SEO Landscape
+The good news is that SEO doesn't require a huge budget. It requires consistency and knowing what to focus on. This guide walks you through exactly that.
 
-Philippine internet users conduct millions of searches every day. Whether they're searching in English, Filipino, or a mix (Taglish), ranking for the right keywords can transform your business.
+## Why SEO Works Differently in the Philippines
 
-## Step 1: Keyword Research for Philippine Businesses
+Philippine search behavior has some quirks worth knowing. Filipinos often search in English but may also use Filipino or Taglish. They tend to be very specific in local searches, including city names like "Makati," "QC," or "Cebu" alongside the service they're looking for.
 
-Start by understanding how Filipinos search for your products or services. Use Google Keyword Planner, Ubersuggest, or Ahrefs to identify:
+Competition in many local niches is also lower than you might expect. A lot of Philippine businesses haven't invested seriously in SEO yet, which means there's real opportunity if you start now.
 
-- Local keywords: "[service] in [city]" (e.g., "web design in Manila")
-- Industry keywords: "[service] Philippines"
-- Problem-based keywords: "how to [solve problem] Philippines"
+## Step 1: Research How Your Customers Actually Search
 
-**Pro tip:** Long-tail keywords (3+ words) have lower competition and higher conversion intent.
+Don't guess at keywords. Use free tools like Google Keyword Planner or Google Search Console to see actual search volume. Look for three types of searches:
 
-## Step 2: Google Business Profile Optimization
+- Local searches: "web design Makati" or "accounting services Cebu"
+- Service searches: "digital marketing agency Philippines"
+- Problem searches: "how to get more customers online Philippines"
 
-For local businesses, your Google Business Profile is crucial. Make sure to:
-- Complete every field with accurate information
-- Add high-quality photos of your business
-- Collect and respond to all reviews
-- Post weekly updates about your business
+Long-tail keywords with three or more words are your best starting point. They have lower competition and the people searching for them usually have clear buying intent.
 
-## Step 3: On-Page SEO Fundamentals
+## Step 2: Set Up and Optimize Your Google Business Profile
 
-Every page on your website should be optimized for a specific keyword:
+If you're a local business, this might be the single most impactful thing you can do for free. A complete, well-optimized Google Business Profile helps you show up in local search results and on Google Maps.
 
-- **Title tag:** Include your main keyword, keep under 60 characters
-- **Meta description:** Compelling 150-160 character summary with keyword
-- **H1 tag:** One per page, include primary keyword
-- **Content:** Minimum 800 words, naturally include keywords
-- **Images:** Use descriptive alt text
+Fill in every field. Add photos of your actual business and team. Get as many genuine reviews from customers as you can, and respond to all of them. Post updates regularly. Google rewards active profiles with better visibility.
 
-## Step 4: Technical SEO
+## Step 3: Fix the Basics on Every Page
 
-Technical issues can kill your SEO efforts before they start:
-- Ensure your site loads in under 3 seconds
-- Make sure it's mobile-friendly
-- Fix broken links (404 errors)
-- Submit your sitemap to Google Search Console
-- Fix duplicate content issues
+Every page on your site should be optimized for a specific topic. Don't try to rank one page for 20 different things. For each important page, make sure you have:
 
-## Step 5: Building Quality Backlinks
+- A title tag under 60 characters that includes your main keyword
+- A meta description between 150 and 160 characters that gives people a reason to click
+- One H1 heading that uses the primary keyword
+- At least 600 words of helpful content on the topic
+- Images with descriptive alt text
 
-In the Philippines, effective link building strategies include:
-- Getting listed in Philippine business directories
-- Guest posting on Filipino industry blogs
-- Partnerships with complementary businesses
-- Creating link-worthy content about Philippine topics
+These basics alone put you ahead of a lot of competitors who haven't bothered.
 
-## Step 6: Content Marketing for Sustained Growth
+## Step 4: Make Sure Your Site Is Technically Healthy
 
-Create content that answers the questions your customers are asking:
-- Blog posts answering common industry questions
-- Guides and tutorials
-- Case studies featuring local Philippine businesses
-- Comparison articles
+A slow or broken website undermines every other SEO effort. Check these things first:
 
-## Measuring Your SEO Success
+Your site should load in under 3 seconds on mobile. Test it with Google's PageSpeed Insights. If it fails, your developer needs to fix image compression, caching, and code bloat before anything else.
 
-Track these key metrics in Google Search Console and Google Analytics:
-- Organic search traffic
-- Keyword rankings
-- Click-through rates
-- Conversion rates from organic traffic
+Make sure Google can crawl your site by submitting your sitemap to Google Search Console. Fix any 404 errors you find there. And check that you don't have duplicate pages confusing search engines.
 
-SEO is a marathon, not a sprint. Consistent effort over 6-12 months typically yields significant results.
+## Step 5: Get Other Sites to Link to You
 
-Need help with your SEO? Our team specializes in helping Philippine businesses rank on page one. [Book a free consultation](/contact) today.
+Backlinks are still one of the most important ranking signals Google uses. In the Philippines, here's where to start:
+
+Get listed in Philippine business directories. Submit your business to sites relevant to your industry. Reach out to local blogs or publications that might want to feature your expertise. Build relationships with complementary businesses and look for opportunities to be mentioned on each other's sites.
+
+You don't need hundreds of backlinks. A handful of relevant, quality links from trusted sites will move the needle more than hundreds of spammy ones.
+
+## Step 6: Create Content That Answers Real Questions
+
+Think about the questions your customers ask you most often. Write blog posts that answer those questions thoroughly. This builds trust with readers and also tells Google that your site is a useful resource.
+
+A few content ideas for Philippine businesses:
+- Industry comparisons ("best [service] providers in [city]")
+- Local guides ("how to register a business in the Philippines")
+- How-to articles relevant to your niche
+- Case studies showing your work
+
+Aim to publish at least one new piece of content per month. Consistency matters more than volume.
+
+## How Long Does SEO Take?
+
+Be honest with yourself about the timeline. You probably won't see significant results in the first 60 days. Most businesses start seeing meaningful organic traffic growth after 4 to 6 months of consistent effort. At the 12-month mark, if you've done things right, SEO becomes one of your most reliable traffic sources.
+
+It's a long game, but it pays off. Unlike paid ads, the traffic you earn through SEO keeps coming without an ongoing ad spend.
+
+## Where to Start
+
+If you're overwhelmed, just focus on these three things first: optimize your Google Business Profile, fix your page title tags and meta descriptions, and write one helpful blog post per month targeting a local keyword.
+
+That's enough to start seeing movement. Once you've done that consistently for a few months, revisit this guide and tackle the next layer.
+
+Need help speeding things up? [Let's talk](/contact). Our SEO team has helped dozens of Philippine businesses reach page one.
     `,
     category: 'SEO',
     tags: ['SEO', 'Philippines', 'Small Business', 'Local SEO', 'Google Rankings'],
     date: '2025-01-08',
     readTime: '12 min read',
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80',
-    author: {
-      name: 'Carlo Santos',
-      avatar: 'https://ui-avatars.com/api/?name=Carlo+Santos&background=0569A8&color=fff&size=80',
-      role: 'Lead SEO Strategist',
-    },
+    author: sgproTeam,
   },
   {
     slug: 'how-to-build-a-high-converting-sales-funnel',
@@ -188,148 +203,143 @@ Need help with your SEO? Our team specializes in helping Philippine businesses r
     excerpt:
       'A detailed breakdown of the exact sales funnel framework we use to help clients generate consistent revenue with minimal ongoing effort.',
     content: `
-A sales funnel is the systematic process of turning a stranger into a loyal customer. Without one, you're leaving massive revenue on the table — most businesses lose 80% of potential customers simply because they have no follow-up process.
+Most businesses are great at getting attention but terrible at keeping it. Someone visits your website, looks around for 90 seconds, and leaves. You never hear from them again. That's not a traffic problem. That's a funnel problem.
 
-## The Anatomy of a High-Converting Sales Funnel
+A sales funnel is the process of turning someone who's never heard of you into a paying customer. When it's built properly, it runs in the background and does the follow-up work you don't have time to do manually.
 
-A great sales funnel has five core stages:
+Here's how to build one that actually works.
 
-1. **Awareness** — The prospect discovers you exist
-2. **Interest** — They want to know more
-3. **Consideration** — They're evaluating you vs. competitors
-4. **Intent** — They're ready to buy
-5. **Purchase** — They become a customer
+## What a Sales Funnel Really Is
 
-## Stage 1: Create an Irresistible Lead Magnet
+Forget the fancy marketing diagrams. At its core, a funnel is just a series of steps that moves someone from "I don't know this business" to "I just bought from them."
 
-Your funnel starts with a lead magnet — a free, high-value resource that solves a specific problem your ideal customer has.
+Every good funnel has four parts: getting attention, capturing contact information, building trust through email, and making an offer. Let's go through each one.
 
-Effective lead magnets include:
-- PDF guides and checklists
-- Mini video courses
-- Free consultations
-- Templates and swipe files
-- Webinars
+## Part 1: Create Something Worth Downloading
 
-**Key principle:** Your lead magnet should be so valuable that people would pay for it.
+You can't just ask someone for their email address. You have to give them a reason to hand it over. That reason is usually a free resource that solves a specific problem.
 
-## Stage 2: Build a High-Converting Opt-in Page
+Good lead magnets are specific. "Free Marketing Tips" is weak. "The 5-Point Checklist We Use Before Launching Any Google Ads Campaign" is specific and valuable. The more specific you are about who it helps and what problem it solves, the higher your opt-in rate will be.
 
-Your opt-in page has one job: get the visitor to give you their email address.
+Formats that work well:
+- PDF checklists and templates
+- Short guides (5 to 10 pages, not 50)
+- Free consultations for service businesses
+- Mini video training (under 20 minutes)
+- Quizzes with personalized results
 
-Elements of a high-converting opt-in page:
-- Compelling headline focused on the benefit
-- Subheadline addressing the pain point
-- Bullet points of what they'll learn/get
-- Professional image of the lead magnet
-- Simple form (name + email is ideal)
-- Trust indicators (testimonials, logos)
+Pick one format and make it genuinely useful. If people download it and think "this was helpful," you're off to a good start.
 
-## Stage 3: Design an Email Nurture Sequence
+## Part 2: Build a Landing Page with One Job
 
-Once someone opts in, your automated email sequence should:
+Your opt-in page has one goal: get the visitor to download your lead magnet. That's it. No navigation menu. No links to other pages. Just a clear headline, a short explanation of what they'll get, and a form.
 
-**Email 1 (Immediate):** Deliver the lead magnet + warm welcome
-**Email 2 (Day 2):** Share your story and how you help people
-**Email 3 (Day 4):** Provide a valuable tip or strategy
-**Email 4 (Day 6):** Share a relevant case study or testimonial
-**Email 5 (Day 8):** Address common objections
-**Email 6 (Day 10):** Make your offer
+A good opt-in page headline follows this pattern: what they get plus what problem it solves. Something like "Download the Free Guide: How to Get More Customers From Google Without Paying for Ads."
 
-## Stage 4: Create a Compelling Offer Page
+Keep the form short. First name and email address is enough. Every extra field you add reduces your conversion rate. Ask for more information later, once you've earned some trust.
 
-Your offer page should clearly communicate:
-- What they get (the offer)
-- What it costs (or saves)
-- Why they need it now (urgency)
-- What others say about it (social proof)
-- What happens next (clear CTA)
+## Part 3: Write Emails That Sound Like a Human Wrote Them
 
-## Stage 5: Post-Purchase Upsell Sequence
+Most email sequences fail because they sound like they were written by a committee. They're stiff, overly formal, and they constantly try to sell.
 
-Most businesses stop at the first sale. The most profitable businesses have a systematic upsell process:
-- Immediate post-purchase upsell (30-50% take rate)
-- Onboarding email sequence
-- Cross-sell complementary offers
-- Regular value-add communications
+Your first five or six emails should mostly provide value. Teach something. Share a story. Point out a mistake people commonly make in your industry. Make the reader glad they signed up.
 
-## Tools We Recommend
+Here's a simple sequence that works:
 
-- **Email marketing:** ActiveCampaign, Klaviyo
-- **Landing pages:** ClickFunnels, GoHighLevel, or custom
-- **CRM:** HubSpot, GoHighLevel
-- **Analytics:** Google Analytics 4
+Email 1 (right away): Deliver the lead magnet with a quick, warm welcome. Tell them who you are in two or three sentences.
 
-## Measuring Funnel Performance
+Email 2 (day 2): Share one useful tip related to the lead magnet topic. Keep it short.
 
-Track these metrics at each stage:
-- Opt-in rate (aim for 30-50%)
-- Email open rate (aim for 25-35%)
-- Sales page conversion rate (aim for 1-5%)
-- Customer Lifetime Value (CLV)
+Email 3 (day 4): Tell a story. A client result, a lesson you learned, a problem you solved. Real stories build trust faster than anything else.
 
-A well-built funnel is an asset that generates revenue 24/7. [Let us build yours](/contact) — we specialize in creating automated sales systems that work while you sleep.
+Email 4 (day 6): Answer a question you get asked a lot. This one works well because it shows you understand their world.
+
+Email 5 (day 8): Share a case study or testimonial. Specific results are more convincing than general praise.
+
+Email 6 (day 10): Make your offer. You've earned it at this point. Be clear about what you're offering, who it's for, and what they should do next.
+
+Write the way you talk. Short paragraphs. Contractions. No corporate-speak. If you wouldn't say it out loud, don't write it.
+
+## Part 4: Make an Offer That's Hard to Say No To
+
+Your offer page is where the sale happens. Most offer pages fail because they focus too much on features and not enough on outcomes.
+
+People don't buy SEO services. They buy more website traffic and more customers. They don't buy ads management. They buy a consistent flow of leads without having to figure out Google or Facebook themselves. Sell the outcome.
+
+Your offer page needs five things:
+
+A clear headline that states the result they'll get. A short explanation of what's included and why it works. Proof that it's worked for others (testimonials with specific numbers are best). An answer to the biggest objection they're likely to have. A single, clear call to action.
+
+## Choosing the Right Tools
+
+You don't need to spend a lot of money to build this. Here are tools worth considering at different budget levels:
+
+For email marketing, ActiveCampaign is our recommendation for most service businesses. It handles automation well and isn't overcomplicated. Klaviyo is better if you're running an e-commerce store.
+
+For landing pages, you can use a tool like ClickFunnels or GoHighLevel, or just build a page on your existing website. The technology matters less than the copy and the offer.
+
+## What to Measure
+
+Once your funnel is live, watch these numbers:
+
+Opt-in rate: What percentage of visitors to your landing page sign up? Anything above 25% is reasonable. Above 40% is excellent.
+
+Email open rate: Are people reading your emails? A 25 to 35% open rate means your subject lines are working. Below 15% means you need to work on your subject lines or clean your list.
+
+Sales conversion rate: What percentage of people who get your offer end up buying? Even 1 to 2% is solid for most service businesses. Track it and improve it over time.
+
+## One Thing Most People Get Wrong
+
+They build the funnel and then forget about it. The best funnels are tested and improved regularly. Change one subject line and see if the open rate goes up. Test two versions of your opt-in page headline. Rewrite an email that has low click-through rates.
+
+Small improvements in each step add up to big differences in overall revenue.
+
+If you'd like help building a funnel for your business, [reach out to our team](/contact). We do this every day and we're happy to walk you through what would work for your specific situation.
     `,
     category: 'Sales Funnels',
     tags: ['Sales Funnel', 'Email Marketing', 'Automation', 'Lead Generation', 'CRM'],
     date: '2024-12-28',
     readTime: '10 min read',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
-    author: {
-      name: 'Alex Rivera',
-      avatar: 'https://ui-avatars.com/api/?name=Alex+Rivera&background=00477F&color=fff&size=80',
-      role: 'Founder & CEO',
-    },
+    author: sgproTeam,
   },
   {
     slug: 'facebook-ads-strategy-for-local-businesses',
     title: 'The Ultimate Facebook Ads Strategy for Local Businesses in 2025',
     excerpt:
-      'Learn how to use Facebook and Instagram ads to attract local customers, generate leads, and grow your business — even on a small budget.',
-    content: `Facebook Ads remain one of the most powerful tools for local business growth...`,
+      'Learn how to use Facebook and Instagram ads to attract local customers, generate leads, and grow your business even on a small budget.',
+    content: `Facebook Ads remain one of the most powerful tools for local business growth. Coming soon.`,
     category: 'Facebook Ads',
     tags: ['Facebook Ads', 'Local Business', 'Instagram Ads', 'Social Media'],
     date: '2024-12-15',
     readTime: '9 min read',
     image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200&q=80',
-    author: {
-      name: 'Maria Lim',
-      avatar: 'https://ui-avatars.com/api/?name=Maria+Lim&background=0993D1&color=fff&size=80',
-      role: 'Head of Paid Media',
-    },
+    author: sgproTeam,
   },
   {
     slug: 'website-speed-optimization-guide',
     title: 'How Website Speed Directly Impacts Your Revenue (And How to Fix It)',
     excerpt:
-      'A 1-second delay in page load time can cost you 7% of your conversions. Here\'s how to make your website blazing fast.',
-    content: `Website speed is not just a technical concern — it\'s a revenue concern...`,
+      "A 1-second delay in page load time can cost you 7% of your conversions. Here's how to make your website blazing fast.",
+    content: `Website speed is not just a technical concern, it is a revenue concern. Coming soon.`,
     category: 'Website Development',
     tags: ['Website Speed', 'Core Web Vitals', 'Conversion Rate', 'Technical SEO'],
     date: '2024-12-05',
     readTime: '7 min read',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
-    author: {
-      name: 'Joanna Cruz',
-      avatar: 'https://ui-avatars.com/api/?name=Joanna+Cruz&background=2C353E&color=fff&size=80',
-      role: 'Web Development Lead',
-    },
+    author: sgproTeam,
   },
   {
     slug: 'email-marketing-automation-guide',
     title: 'Email Marketing Automation: The Complete Guide for Growing Businesses',
     excerpt:
       'Email marketing has an average ROI of 4,200%. Learn how to set up automated email sequences that generate consistent revenue.',
-    content: `Email marketing remains the highest-ROI digital marketing channel available...`,
+    content: `Email marketing remains the highest-ROI digital marketing channel available. Coming soon.`,
     category: 'Email Marketing',
     tags: ['Email Marketing', 'Automation', 'CRM', 'Lead Nurturing'],
     date: '2024-11-20',
     readTime: '11 min read',
     image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=80',
-    author: {
-      name: 'Alex Rivera',
-      avatar: 'https://ui-avatars.com/api/?name=Alex+Rivera&background=00477F&color=fff&size=80',
-      role: 'Founder & CEO',
-    },
+    author: sgproTeam,
   },
 ]
