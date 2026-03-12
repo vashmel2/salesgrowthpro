@@ -89,7 +89,7 @@ export default function NewsletterSignup({ variant = 'light', className }: Newsl
       {status === 'error' && (
         <p className="text-xs text-red-400">{message}</p>
       )}
-      <p className={cn('text-xs', variant === 'dark' ? 'text-gray-500' : 'text-gray-400')}>
+      <p className={cn('text-xs', variant === 'dark' ? 'text-white/50' : 'text-gray-400')}>
         No spam. Unsubscribe anytime.
       </p>
     </form>

@@ -202,11 +202,9 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Featured Image */}
-      <div className="container-custom max-w-4xl mx-auto -mt-1">
-        <div className="rounded-2xl overflow-hidden shadow-hero h-64 md:h-96">
-          <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-        </div>
+      {/* Featured Image — full bleed */}
+      <div className="w-full overflow-hidden h-64 md:h-[420px]">
+        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
       </div>
 
       {/* Article Body */}
