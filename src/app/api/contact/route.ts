@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { supabase } from '@/lib/supabase'
 
 const schema = z.object({
   name: z.string().min(2).max(100),
@@ -14,51 +15,33 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const data = schema.parse(body)
 
-    // Log submission (replace with your actual DB/email logic)
-    const submission = {
-      ...data,
-      timestamp: new Date().toISOString(),
-      source: req.headers.get('referer') || 'direct',
-      ip: req.headers.get('x-forwarded-for') || 'unknown',
+    const { error } = await supabase.from('contact_submissions').insert([
+      {
+        name: data.name,
+        email: data.email,
+        company: data.company || null,
+        service: data.service,
+        message: data.message,
+        source: req.headers.get('referer') || 'direct',
+        ip: req.headers.get('x-forwarded-for') || null,
+      },
+    ])
+
+    if (error) {
+      console.error('Supabase insert error:', error)
+      return NextResponse.json(
+        { error: 'Failed to save your message. Please try again.' },
+        { status: 500 }
+      )
     }
 
-    console.log('📧 New Contact Form Submission:', submission)
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // PRODUCTION: Uncomment and configure ONE of the options below:
-    //
-    // Option 1: Send email via Resend
+    // TODO: Send notification email via Resend once configured
     // import { Resend } from 'resend'
     // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'SalesGrowthPro <noreply@salesgrowthpro.com>',
-    //   to: 'hello@salesgrowthpro.com',
-    //   subject: `New inquiry from ${data.name} — ${data.service}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${data.name}</p>
-    //     <p><strong>Email:</strong> ${data.email}</p>
-    //     <p><strong>Company:</strong> ${data.company || 'N/A'}</p>
-    //     <p><strong>Service:</strong> ${data.service}</p>
-    //     <p><strong>Message:</strong> ${data.message}</p>
-    //   `,
-    // })
-    //
-    // Option 2: Save to database (e.g., Supabase)
-    // import { createClient } from '@supabase/supabase-js'
-    // const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_KEY!)
-    // await supabase.from('contact_submissions').insert([submission])
-    //
-    // Option 3: Send to a webhook (e.g., Zapier, Make)
-    // await fetch(process.env.WEBHOOK_URL!, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(submission),
-    // })
-    // ─────────────────────────────────────────────────────────────────────────
+    // await resend.emails.send({ ... })
 
     return NextResponse.json(
-      { success: true, message: 'Your message has been received. We\'ll be in touch within 24 hours.' },
+      { success: true, message: "Your message has been received. We'll be in touch within 24 hours." },
       { status: 200 }
     )
   } catch (error) {

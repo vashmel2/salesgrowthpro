@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { supabase } from '@/lib/supabase'
 
 const schema = z.object({
   email: z.string().email(),
@@ -10,41 +11,38 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const { email } = schema.parse(body)
 
-    const subscription = {
-      email,
-      subscribedAt: new Date().toISOString(),
-      source: req.headers.get('referer') || 'website',
+    // Check for existing subscriber
+    const { data: existing } = await supabase
+      .from('newsletter_subscribers')
+      .select('id')
+      .eq('email', email)
+      .maybeSingle()
+
+    if (existing) {
+      return NextResponse.json(
+        { success: true, message: "You're already subscribed!" },
+        { status: 200 }
+      )
     }
 
-    console.log('📬 New Newsletter Subscription:', subscription)
+    const { error } = await supabase.from('newsletter_subscribers').insert([
+      {
+        email,
+        source: req.headers.get('referer') || 'website',
+      },
+    ])
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // PRODUCTION: Uncomment and configure your email service:
-    //
-    // Option 1: Mailchimp
-    // const response = await fetch(
-    //   `https://us1.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members`,
-    //   {
-    //     method: 'POST',
-    //     headers: {
-    //       Authorization: `Basic ${Buffer.from(`anystring:${process.env.MAILCHIMP_API_KEY}`).toString('base64')}`,
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ email_address: email, status: 'subscribed' }),
-    //   }
-    // )
-    //
-    // Option 2: ConvertKit
-    // await fetch(`https://api.convertkit.com/v3/forms/${process.env.CONVERTKIT_FORM_ID}/subscribe`, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ api_key: process.env.CONVERTKIT_API_KEY, email }),
-    // })
-    //
-    // Option 3: Save to Supabase
-    // const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_KEY!)
-    // await supabase.from('newsletter_subscribers').insert([subscription])
-    // ─────────────────────────────────────────────────────────────────────────
+    if (error) {
+      console.error('Supabase insert error:', error)
+      return NextResponse.json(
+        { error: 'Failed to subscribe. Please try again.' },
+        { status: 500 }
+      )
+    }
+
+    // TODO: Add to Mailchimp or Resend audience once confirmed
+    // if (process.env.MAILCHIMP_API_KEY) { ... }
+    // if (process.env.RESEND_API_KEY) { ... }
 
     return NextResponse.json(
       { success: true, message: 'Successfully subscribed to the newsletter.' },
