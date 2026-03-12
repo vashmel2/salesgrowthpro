@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" fill="none">
+  <!-- Icon: SG lettermark -->
+  <rect x="2" y="2" width="52" height="52" rx="12" fill="#00477F"/>
+  <rect x="8" y="8" width="40" height="40" rx="8" fill="#0993D1" opacity="0.3"/>
+  <!-- S -->
+  <text x="10" y="38" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="white">S</text>
+  <!-- G -->
+  <text x="28" y="38" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="#B8E4F9">G</text>
+
+  <!-- SALES GROWTH PRO text -->
+  <text x="64" y="22" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#2C353E" letter-spacing="2">SALES GROWTH</text>
+  <text x="64" y="40" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="#0993D1" letter-spacing="3">PRO</text>
+</svg>
